@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="static/css/bootstrap-3.3.4.css">
+    <link rel="stylesheet" href="static/css/css.css">
+    <link rel="stylesheet" href="static/css/index2.css">
+    <title>国粹经典--永昌永子</title>
+</head>
+
+<body>
+    <div class="content" onclick="fun(event)">
+        <div class="header">
+            <div class="header_l"></div>
+            <div class="header_m">
+                <h1 style="font-size: 50px; font-family: 'Brush Script MT', cursive; color: #ff6347; text-shadow: 2px 2px 4px #000000;">国粹经典--永昌永子</h1>
+            </div>
+            <div class="header_r"></div>
+        </div>
+        <div class="main">
+            <div class="main_l">
+                <div class="item mainl1">
+                    <div class="title">
+                        <h2>制作原料</h2>
+                    </div>
+                    <div class="con">
+                        <div class="con_f bar1">
+                            <div id="chart4"style="width: 20vw; height: 30vh; margin-top: 0.25vh;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item mainl2">
+                    <div class="title">
+                        <h2>工艺流程</h2>
+                    </div>
+                    <div class="con">
+                        <div class="con_f bar2">
+                            <div id="chart3" style="width: 20vw; height: 25vh; margin-top: 0.25vh;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="eject_bigbox">
+                <div class="close2"></div>
+                    <h2>国宝永子介绍</h2>
+                <div class="con_box">
+                    <video src="/static/images/video.mp4" controls style="width: 100%; height: 50vh; margin-bottom: 125vh;"></video>
+                    <div class="textbox">
+                        <p>
+                            在围棋的世界里，有一种棋子，以其独特的魅力和深厚的文化底蕴，被誉为“国宝”——它就是永子围棋。永子围棋产自云南省保山市，其历史可追溯至明代，是围棋文化中的一颗璀璨明珠。永子质坚色润、细腻如玉、触子心舒、冬暖夏凉、神韵隽永，是古往今来举世公认的棋中圣品，历来深受达官贵人与文人雅士所追捧，为上乘贡品，堪称国宝。
+                        </p>
+                        <p>
+                            围棋是中国国粹，是中华民族文明和智慧的结晶；“永子”是中华民族优秀传统文化的瑰宝，是弘扬和传承中华民族优秀传统文化的重要载体。永子由明代永昌人李德章发明，因这种棋子产于永昌，遂被世人称之为永子。
+                        </p>
+                        <p>
+                            棋子出云南，以永昌者为上
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="eject control">
+                <div class="close"></div>
+                <div class="line5"></div>
+            </div>
+
+            <div id="chart2" style="position: absolute; margin-top: 2px; top: 40%; left: 50%; transform: translate(-50%, -50%); width: 50%; height: 70%; z-index: 100;"></div>
+
+            <div class="main_r">
+                <div class="item mainr1">
+                    <div class="title">
+                        <h2>特点</h2>
+                    </div>
+                    <div class="con">
+                        <div class="con_f bar3">
+                            <div id="chart1" style="width: 20vw; height: 30vh; margin-top: 0.25vh;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item mainr2">
+                    <div class="title">
+                        <h2>词云图</h2>
+                    </div>
+                    <div class="con">
+                        <div class="con_f bar4">
+                            <img src="static/images/ciyun.png" alt="永昌永子词云图" style="width:18vw; height:auto;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <style type="text/css">
+        .main_m {
+            width: 100%; /* 父容器宽度 */
+            height: 100%; /* 父容器高度 */
+            border: 1px solid #ccc; /* 可选：添加边框以便观察 */
+            padding: 5px; /* 可选：添加内边距 */
+        }
+
+        .main_m_t {
+            width: 100%; /* 内部容器宽度 */
+            height: 100vh; /* 内部容器高度 */
+            display: flex;
+            justify-content: center; /* 水平居中 */
+            align-items: center; /* 垂直居中 */
+        }
+
+        .demo i {
+            position: absolute;
+            bottom: 10px;
+            right: 24px;
+            top: auto;
+            cursor: pointer;
+        }
+
+        footer {
+            text-align: center;
+            font-size: 1vw;
+            color: #4B7EFE;
+        }
+    </style>
+
+    <script src="static/js/jquery-1.10.2.js"></script>
+    <script src="static/js/bootstrap-3.3.4.js"></script>
+    <script src="static/js/echarts.min.js"></script>
+    <script src="static/js/chart1.js"></script>
+    <script src="static/js/chart2.js"></script>
+    <script src="static/js/chart3.js"></script>
+    <script src="static/js/chart4.js"></script>
+
+    <script>
+        var eject1 = document.getElementsByClassName('eject')[0];
+        var eject2 = document.getElementsByClassName('eject_bigbox')[0];
+        eject1.onclick = function () {
+            eject1.classList.add("control");
+        };
+        eject2.onclick = function () {
+            eject2.classList.add("eject_bigbox_control");
+        };
+
+        function fun(e) {
+            var tar = e.target;
+            console.log(tar);
+            if (tar.classList[0] == 'point_child') {
+                eject1.classList.remove("control");
+                eject1.children[1].children[0].children[1].innerHTML = tar.innerHTML;
+            } else if (tar.classList[0] == 'point_child_img') {
+                eject1.classList.remove("control");
+                eject1.children[1].children[0].children[1].innerHTML = tar.dataset.name;
+            } else {
+                eject1.classList.add("control");
+            }
+        }
+
+        $('.content .main .main_m_f ul li').click(function () {
+            $(this).addClass('active').siblings().removeClass('active');
+        });
+    </script>
+</body>
+</html>
